@@ -76,7 +76,7 @@ for idx, Ps in enumerate(SNR_lin):
 #  PLOTTING (USER OUTAGE ONLY)
 # =====================================================
 plt.figure(figsize=(7,5))
-
+ 
 for k in range(K):
     plt.semilogy(SNR_dB, out_UE[k], marker='o',
                  label=f'UE{k+1} (commensal)')
