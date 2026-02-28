@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 #  MONTE CARLO & SNR GRID
 # =====================================================
 MC = int(2e5)                    # Monte Carlo samples
-SNR_dB = np.arange(0, 31, 5)     # 0:5:30 dB
-       # 0:5:30 dB
+SNR_dB = np.arange(0, 31, 5)     # 0:5:30 dB      # 0:5:30 dB
 SNR_lin = 10**(SNR_dB/10)        # Ps / sigma^2  (noise variance = 1)
 
 # =====================================================
