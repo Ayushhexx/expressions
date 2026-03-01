@@ -7,4 +7,3 @@ import matplotlib.pyplot as plt
 MC = int(2e5)                    # Monte Carlo samples
 SNR_dB = np.arange(0, 31, 5)     # 0:5:30 dB
 SNR_dB = range(0, 31, 5)        # 0:5:30 dB
-
