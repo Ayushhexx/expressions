@@ -68,7 +68,6 @@ for idx, Ps in enumerate(SNR_lin):
         # Paper-matched commensal SINR
         sinr_k = (beta * Ps * a[k] * h[k]) / \
                  (Ps * h[k] * Z1 + alpha * Ps * ht * gk[k] + 1)
-
         # Monte-Carlo outage
         out_UE[k, idx] = np.mean(sinr_k < gamma_th[k])
 
@@ -76,10 +75,12 @@ for idx, Ps in enumerate(SNR_lin):
 #  PLOTTING (USER OUTAGE ONLY)
 # =====================================================
 plt.figure(figsize=(7,5))
- 
+colors = ['red', 'pink', 'purple']  # UE1=red, UE2=pink, UE3=purple
+
 for k in range(K):
-    plt.semilogy(SNR_dB, out_UE[k], marker='o',
+    plt.semilogy(SNR_dB, out_UE[k], marker='o', color=colors[k],
                  label=f'UE{k+1} (commensal)')
+
 
 plt.grid(True, which='both')
 plt.xlabel('Average SNR = P_s/σ² (dB)')
